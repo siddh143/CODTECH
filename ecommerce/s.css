@@ -1,0 +1,63 @@
+/* Simple Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f5f3ed;
+  }
+  
+  header {
+    text-align: center;
+    background-color: #e4e01d;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .product {
+    background-color: #e61010;
+    border: 1px solid #f1f8f3;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #0d09f5;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #f1c228;
+  }
+  
+  /* Media Query for Small Devices */
+  @media (max-width: 600px) {
+    body {
+      font-size: 16px;
+    }
+  }
+  
