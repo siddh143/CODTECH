@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LearnEasy – Quiz & Progress Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to LearnEasy</h1>
+
+    <section id="loginSection">
+      <input type="text" id="username" placeholder="Enter your name" />
+      <button id="loginBtn">Login</button>
+    </section>
+
+    <section id="contentSection" class="hidden">
+      <h2>Hello, <span id="displayName"></span></h2>
+
+      <div class="video-lesson">
+        <h3>🎬 Video Lesson</h3>
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="quiz-section">
+        <h3>🧠 Quiz</h3>
+        <p>What is <strong>2 + 2?</strong></p>
+        <input type="number" id="quizAnswer" min="0" />
+        <button id="submitQuizBtn">Submit</button>
+        <p id="quizResult" aria-live="polite"></p>
+      </div>
+
+      <div class="progress-container">
+        <label for="progress">Your Progress:</label>
+        <progress id="progress" value="0" max="100"></progress>
+      </div>
+
+      <button id="logoutBtn" class="secondary">Logout</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
