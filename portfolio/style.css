@@ -1,0 +1,109 @@
+:root {
+  --bg: #f56a0e;
+  --fg: #222;
+  --accent: #007bff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+.header {
+  background: rgb(245, 229, 2);
+  padding: 2rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(250, 184, 3, 0.863);
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: bold;
+}
+nav a:hover {
+  color: var(--accent);
+}
+
+.section {
+  padding: 4rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: rgb(248, 232, 5);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transform: translateY(20px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(0);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: rgb(253, 252, 252);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: darken(var(--accent), 10%);
+}
+
+/* Scroll‑reveal effect */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Form animations */
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  20%,60% { transform: translateX(-8px); }
+  40%,80% { transform: translateX(8px); }
+}
+input.invalid, textarea.invalid {
+  border: 2px solid red;
+  animation: shake 0.3s ease;
+}
+
+.footer {
+  padding: 2rem 0;
+  background: #f7f310;
+  font-size: 0.9rem;
+}
